@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qianwang.slidingmenudemo.view.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/smenu"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    app:menuPadding="100dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <include layout="@layout/menu_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/qq">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goMenu"
+                android:text="@string/btnmenu" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</com.qianwang.slidingmenudemo.view.SlidingMenu>
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript View</title>
+
+    <script type="text/javascript">
+
+        function showToast(){
+            var message = document.getElementById("message").value;
+            var lengthLong = document.getElementById("length").checked;
+
+            /*
+                调用java里的makeToast方法，注意这里的app 就和addJavascriptInterface这个函数里的
+                第二个参数值要保持一致，且大小写敏感
+             */
+            app.makeToast(message, lengthLong);
+            return false;
+        }
+
+        /*
+            这个很好理解，就是当你这个html加载完成的时候 把表单的submit提交定位到js的 showToast方法里面
+            就理解成方法的重定向即可
+         */
+        window.onload = function(){
+            var form = document.getElementById("form");
+            form.onsubmit = showToast;
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+<form id="form">
+    Message: <input id="message" name="message" type="text"/><br />
+    Long: <input id="length" name="length" type="checkbox" /><br />
+    <input type="submit" value="Make Toast" />
+</form>
+
+</body>
+</html>

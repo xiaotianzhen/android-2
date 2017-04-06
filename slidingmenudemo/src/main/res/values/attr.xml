@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="menuPadding" format="dimension"/>
+    <declare-styleable name="SlidingMenu">
+        <attr name="menuPadding"/>
+    </declare-styleable>
+
+
+
+
+
+    <attr name="BorderRadius" format="dimension"/>
+    <attr name="type" >
+        <enum name="circle" value="0"/>
+        <enum name="round" value="1"/>
+    </attr>
+
+    <attr name="src" format="reference"/>
+
+    <declare-styleable name="CustomImageview">
+
+        <attr name="BorderRadius"/>
+        <attr name="type"/>
+        <attr name="src"/>
+
+    </declare-styleable>
+    
+</resources>
